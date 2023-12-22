@@ -11,6 +11,7 @@ document
     const triangleHeight = parseFloat(triangleHeightString);
     console.log(triangleHeight);
 
+    const areaCalculation = document.getElementById("calculation-entry");
     const correctInputValue = document.getElementById("empty-input");
     if (
       (isNaN(triangleBase) && isNaN(triangleHeight)) ||
@@ -23,6 +24,8 @@ document
       const triangleAreaString = triangleAreaField.innerText;
       const triangleArea = parseFloat(triangleAreaString);
       const triangleAreaTotal = 0.5 * triangleBase * triangleHeight;
+      areaCalculation.innerText = "Triangle:"  + triangleAreaTotal + "cm²";
+
       triangleAreaField.innerText = triangleAreaTotal;
 
       triangleBaseField.value = "";
